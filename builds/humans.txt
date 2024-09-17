@@ -1,0 +1,12 @@
+# humanstxt.org/
+# The humans responsible & technologies
+
+# TEAM
+
+    Александр Арнаутов
+
+# TECHNOLOGIES
+
+    HTML5, CSS3, JS.
+    TARS
+    

@@ -1,0 +1,258 @@
+.price {
+    margin-top: 64px;
+}
+
+.price__wrapper {
+    display: flex;
+    gap: 44px;
+}
+
+.price__link {
+    font-size: 1.25rem;
+    line-height: 24px;
+    margin-top: 48px;
+    display: inline-block;
+}
+
+.price__pic {
+    width: 475px;
+    min-width: 474px;
+    height: 535px;
+    position: relative;
+
+    &.anim {
+        .price__pic-img_2,
+        .price__pic-img_4 {
+            animation: 0.3s boom linear forwards;
+        }
+    }
+}
+
+.price__pic-img {
+    position: absolute;
+}
+
+.price__pic-img_2 {
+    left: -30px;
+    top: -28px;
+    scale: 0;
+}
+
+.price__pic-img_3 {
+    left: 75px;
+    top: 90px;
+}
+
+.price__pic-img_4 {
+    bottom: 20px;
+    left: -15px;
+    scale: 0;
+}
+
+.price__pic-img_5 {
+    bottom: 5px;
+    left: 60px;
+}
+
+.price__pic-img_6 {
+    bottom: -90px;
+    right: -5px;
+}
+
+.price__table {
+    margin-top: 60px;
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 1.25rem;
+        line-height: 23px;
+    }
+
+    th {
+        opacity: 0.7;
+        width: 43.5%;
+        font-weight: 400;
+        padding: 16px 16px 16px 0;
+        border-right: 2px solid var(--gray);
+        border-bottom: 2px solid var(--gray);
+        text-align: left;
+
+    }
+
+    td {
+        width: 56.5%;
+        font-weight: 600;
+        padding: 16px 0 16px 16px;
+        border-bottom: 2px solid var(--gray);
+
+        span {
+            padding-right: 5px;
+            text-decoration: line-through solid var(--red);
+        }
+    }
+
+    tr {
+        &:first-of-type {
+            th {
+                padding: 0 16px 16px 0;
+            }
+
+            td {
+                padding: 0 0 16px 16px;
+            }
+        }
+
+        &:last-of-type {
+            th {
+                padding: 16px 16px 0 0;
+                border-bottom: none;
+            }
+
+            td {
+                padding: 16px 0 0 16px;
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    .price__wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .price {
+        margin-top: 53px;
+    }
+
+    .price__wrapper {
+        gap: 5px;
+    }
+
+    .price__pic {
+        min-width: 335px;
+        width: 335px;
+        height: 402px;
+    }
+
+    .price__pic-img_1 {
+        width: 100%;
+    }
+
+    .price__pic-img_2 {
+        left: -25px;
+        top: -22px;
+        width: 380px;
+    }
+    
+    .price__pic-img_3 {
+        left: 50px;
+        top: 65px;
+        width: 240px;
+    }
+    
+    .price__pic-img_4 {
+        bottom: 40px;
+        left: -10px;
+        width: 170px;
+        scale: 0;
+    }
+    
+    .price__pic-img_5 {
+        bottom: 30px;
+        left: 45px;
+        width: 110px
+    }
+    
+    .price__pic-img_6 {
+        bottom: -40px;
+        right: -5px;
+        width: 200px;
+    }
+
+    .price__table {
+        margin-top: 30px;
+
+        table {
+            display: block;
+        }
+
+        tbody {
+            display: block;
+        }
+
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 16px 0;
+            gap: 12px;
+
+            &:not(:first-of-type) {
+                border-top: 2px solid var(--gray);
+            }
+
+            &:first-of-type,
+            &:last-of-type {
+                td {
+                    padding: 0;
+                }
+            }
+
+            &:first-of-type {
+                th {
+                    padding: 0;
+                }
+            }
+            &:last-of-type {
+                th {
+                    padding: 0;
+                }
+            }
+        }
+
+        th,td {
+            display: flex;
+            white-space: nowrap;
+            flex-wrap: wrap;
+            width: max-content;
+            border: none;
+            align-items: center;
+        }
+
+        th {
+            
+            padding: 0;
+        }
+
+        td {
+            padding: 0;
+
+            span {
+                padding-right: 10px;
+            }
+        }
+    }
+
+    .price__link {
+        font-size: 1.125rem;
+        line-height: 22px;
+        margin-top: 25px;
+    }
+}
+
+@keyframes boom {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
